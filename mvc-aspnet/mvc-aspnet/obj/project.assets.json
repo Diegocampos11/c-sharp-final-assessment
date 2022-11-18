@@ -10435,19 +10435,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DiegoMauricio.Campos\\.nuget\\packages\\": {}
+    "C:\\Users\\Marc.Cobo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DiegoMauricio.Campos\\c-sharp-final-assessment\\mvc-aspnet\\mvc-aspnet\\mvc-aspnet.csproj",
+      "projectUniqueName": "C:\\Solera\\c-sharp-final-assessment\\mvc-aspnet\\mvc-aspnet\\mvc-aspnet.csproj",
       "projectName": "mvc-aspnet",
-      "projectPath": "C:\\Users\\DiegoMauricio.Campos\\c-sharp-final-assessment\\mvc-aspnet\\mvc-aspnet\\mvc-aspnet.csproj",
-      "packagesPath": "C:\\Users\\DiegoMauricio.Campos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DiegoMauricio.Campos\\c-sharp-final-assessment\\mvc-aspnet\\mvc-aspnet\\obj\\",
+      "projectPath": "C:\\Solera\\c-sharp-final-assessment\\mvc-aspnet\\mvc-aspnet\\mvc-aspnet.csproj",
+      "packagesPath": "C:\\Users\\Marc.Cobo\\.nuget\\packages\\",
+      "outputPath": "C:\\Solera\\c-sharp-final-assessment\\mvc-aspnet\\mvc-aspnet\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DiegoMauricio.Campos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Marc.Cobo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10507,7 +10512,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

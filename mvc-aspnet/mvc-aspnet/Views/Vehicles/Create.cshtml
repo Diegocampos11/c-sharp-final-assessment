@@ -4,39 +4,37 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Vehicle</h4>
+<h1>Create Vehicle</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label asp-for="Brand" class="control-label"></label>
                 <input asp-for="Brand" class="form-control" />
                 <span asp-validation-for="Brand" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label asp-for="Vin" class="control-label"></label>
                 <input asp-for="Vin" class="form-control" />
                 <span asp-validation-for="Vin" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label asp-for="Color" class="control-label"></label>
                 <input asp-for="Color" class="form-control" />
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label asp-for="Year" class="control-label"></label>
                 <input asp-for="Year" class="form-control" />
                 <span asp-validation-for="Year" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label asp-for="OwnerId" class="control-label"></label>
                 <select asp-for="OwnerId" class ="form-control" asp-items="ViewBag.OwnerId"></select>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -44,7 +42,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="mt-3 btn btn-danger">Back to List</a>
 </div>
 
 @section Scripts {
