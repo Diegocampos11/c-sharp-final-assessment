@@ -21,12 +21,14 @@ namespace mvc_aspnet.Controllers
         // GET: Vehicles
         public async Task<IActionResult> Index(string searchString)
         {
-            var aspnetContext = _context.Vehicles.Include(v => v.Owner);
             if (!String.IsNullOrEmpty(searchString))
             {
-                aspnetContext.Where(s => s.Owner.LastName.Contains(searchString));
+                return View(await (_context.Vehicles.Include(v => v.Owner).Where(v => v.Owner.FirstName.Contains(searchString) || v.Owner.LastName.Contains(searchString))).ToListAsync());
             }
-            return View(await aspnetContext.ToListAsync());
+            else
+            {
+                return View(await (_context.Vehicles.Include(v => v.Owner)).ToListAsync());
+            }
         }
 
         // GET: Vehicles/Details/5
