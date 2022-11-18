@@ -154,14 +154,14 @@ namespace mvc_aspnet.Controllers
             {
                 _context.Claims.Remove(claim);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ClaimExists(int id)
         {
-          return _context.Claims.Any(e => e.Id == id);
+            return _context.Claims.Any(e => e.Id == id);
         }
     }
 }

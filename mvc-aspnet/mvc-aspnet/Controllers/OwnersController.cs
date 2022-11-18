@@ -21,7 +21,7 @@ namespace mvc_aspnet.Controllers
         // GET: Owners
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Owners.ToListAsync());
+            return View(await _context.Owners.ToListAsync());
         }
 
         // GET: Owners/Details/5
@@ -147,14 +147,14 @@ namespace mvc_aspnet.Controllers
             {
                 _context.Owners.Remove(owner);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool OwnerExists(int id)
         {
-          return _context.Owners.Any(e => e.Id == id);
+            return _context.Owners.Any(e => e.Id == id);
         }
     }
 }

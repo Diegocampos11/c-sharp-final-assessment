@@ -23,19 +23,17 @@ public partial class AspnetContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-S67PI3S;Database=aspnet;Integrated Security=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-75LHGU9;Database=aspnet;Integrated Security=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Claim>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__claims__3213E83FDF89FAE7");
+            entity.HasKey(e => e.Id).HasName("PK__claims__3213E83F69A4AEA8");
 
             entity.ToTable("claims");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Date)
                 .HasColumnType("date")
                 .HasColumnName("date");
@@ -56,13 +54,11 @@ public partial class AspnetContext : DbContext
 
         modelBuilder.Entity<Owner>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__owners__3213E83F574A3AEA");
+            entity.HasKey(e => e.Id).HasName("PK__owners__3213E83F05FBF841");
 
             entity.ToTable("owners");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.DriverLicense)
                 .HasMaxLength(250)
                 .IsUnicode(false)
@@ -79,13 +75,11 @@ public partial class AspnetContext : DbContext
 
         modelBuilder.Entity<Vehicle>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__vehicles__3213E83FE515D289");
+            entity.HasKey(e => e.Id).HasName("PK__vehicles__3213E83FA0180676");
 
             entity.ToTable("vehicles");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Brand)
                 .HasMaxLength(250)
                 .IsUnicode(false)

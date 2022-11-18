@@ -154,14 +154,14 @@ namespace mvc_aspnet.Controllers
             {
                 _context.Vehicles.Remove(vehicle);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool VehicleExists(int id)
         {
-          return _context.Vehicles.Any(e => e.Id == id);
+            return _context.Vehicles.Any(e => e.Id == id);
         }
     }
 }
