@@ -19,10 +19,16 @@ namespace mvc_aspnet.Controllers
         }
 
         // GET: Vehicles
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string firstName, string lastName)
         {
-            var aspnetContext = _context.Vehicles.Include(v => v.Owner);
-            return View(await aspnetContext.ToListAsync());
+            if (!String.IsNullOrEmpty(firstName) || !String.IsNullOrEmpty(lastName))
+            {
+                return View(await (_context.Vehicles.Include(v => v.Owner).Where(v => v.Owner.FirstName.Contains(firstName) || v.Owner.LastName.Contains(lastName))).ToListAsync());
+            }
+            else
+            {
+                return View(await (_context.Vehicles.Include(v => v.Owner)).ToListAsync());
+            }
         }
 
         // GET: Vehicles/Details/5
