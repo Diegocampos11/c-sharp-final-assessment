@@ -19,9 +19,13 @@ namespace mvc_aspnet.Controllers
         }
 
         // GET: Vehicles
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
             var aspnetContext = _context.Vehicles.Include(v => v.Owner);
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                aspnetContext.Where(s => s.Owner.LastName.Contains(searchString));
+            }
             return View(await aspnetContext.ToListAsync());
         }
 
