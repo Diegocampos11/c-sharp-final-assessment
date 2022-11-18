@@ -9,6 +9,15 @@
 <p>
     <a asp-action="Create" class="btn btn-primary" role="button">Create New</a>
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by vehicle brand: @Html.TextBox("Brand") year: @Html.TextBox("Year")
+        <input class="btn btn-dark" type="submit" value="Search">
+    </p>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -22,7 +31,10 @@
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Vehicle)
+                @Html.DisplayNameFor(model => model.Vehicle.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle.Year)
             </th>
             <th></th>
         </tr>
@@ -41,7 +53,10 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Vehicle.Id)
+                    @Html.DisplayFor(modelItem => item.Vehicle.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vehicle.Year)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info" role="button">Edit</a> |
